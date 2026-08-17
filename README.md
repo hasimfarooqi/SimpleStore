@@ -4,23 +4,46 @@ SimpleStore is a local persistent storage extension for MIT App Inventor.
 
 ## Features
 
-- Save and retrieve values
-- Delete values
-- Check whether a value exists
-- Clear all stored data
-- Get all stored data
-- Get all stored names
-- Add items to a list
-- Get a list
-- Remove an item from a list
-- Clear a list
-- Custom storage namespace
-- ValueSaved, ValueDeleted and StoreCleared events
+### Storage
+- SaveValue — Save a value using a name/key.
+- GetValue — Get a saved value.
+- DeleteValue — Delete one saved value.
+- HasValue — Check whether a key exists.
+- ClearStore — Clear all stored data.
+- GetAllData — Get all stored data as JSON.
+- GetAllNames — Get all stored names/keys.
 
-## Download
+### Memo/List
+- AddToList — Add an item to a list.
+- GetList — Get a stored list.
+- RemoveFromList — Remove an item from a list.
+- ClearList — Clear one list.
 
-Download the latest AIX from the Releases section.
+### Events
+- ValueSaved — Fires after a value is saved.
+- ValueDeleted — Fires after a value is deleted.
+- StoreCleared — Fires after all stored data is cleared.
 
-## Version
+### Namespace
+Namespace allows different SimpleStore components to use separate local storage areas.
 
-Current stable release: v1.0.0
+## Storage Type
+
+SimpleStore stores data locally on the Android device.
+
+It does not require an internet connection or a cloud server.
+
+## Example
+
+Save:
+
+name = username
+value = Hasim
+
+Get:
+
+name = username
+
+Result:
+
+Hasim
